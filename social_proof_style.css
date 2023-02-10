@@ -1,0 +1,131 @@
+/* CSS RESET */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verified: hsl(333, 80%, 67%);
+    --box-background: hsl(300, 43%, 22%);
+    --white: hsl(0, 0%, 100%);
+    --span_back: hsl(300, 24%, 96%);
+}
+
+body {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+
+/* First Div */
+.review {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail {
+    width: 200px;
+}
+
+.detail h2 {
+    color: var(--box-background);
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+
+}
+.detail p {
+    font-size: 12px;
+
+}
+
+span {
+    display: block;
+    background-color: var(--span_back);
+    margin: 10px;
+    padding: 10px 40px 10px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.one {
+    position: relative;
+    right: 80px;
+}
+.two {
+    position: relative;
+    right: 40px;
+}
+
+/* Second section */
+.comments {
+    display: flex;
+    flex-direction: row;
+    color: var(--white);
+    font-size: 12px;
+    
+}
+.comments img {
+    border-radius: 50%;
+    max-width: 50px;
+}
+/* TOP RIGHT BOTTOM LEFT 👇*/
+.img1 {
+    background-color: var(--box-background);
+    margin: 20px 20px 20px 0px;
+    padding: 20px;
+    border-radius: 10px;
+   
+}
+.img2 {
+    background-color: var(--box-background);
+    margin: 20px 20px 20px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    top: 25px;
+}
+.img3 {
+    background-color: var(--box-background);
+    margin: 20px 20px 20px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    top: 50px;
+}
+.verified {
+    color: var(--verified);
+}
+.name, .verified {
+    position: relative;
+    left: 70px;
+    bottom: 50px;
+}
+@media (max-width: 640px) {
+    body {
+        max-width: 320px;
+    }
+    .review {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    span {
+        padding: 20px 20px 20px 20px;
+        text-align: center;
+    }
+    .one, .two {
+        position: unset;
+    }
+    .comments {
+        flex-direction: column;
+    }
+    .img1, .img2, .img3 {
+        margin-left: 20px;
+        margin: 10px;
+    }
+    .img2, .img3 {
+        position: unset;
+    }
+}
